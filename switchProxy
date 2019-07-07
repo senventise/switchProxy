@@ -1,0 +1,15 @@
+#!/bin/python
+import os
+
+def readConfig():
+	cmd = """kreadconfig5 --file $HOME/.config/kioslaverc --group "Proxy Settings" --key "ProxyType" """
+	return int(os.popen(cmd).read().replace("\n",""))
+
+def writeConfig(value):
+	cmd = f"""kwriteconfig5 --file $HOME/.config/kioslaverc --group "Proxy Settings" --key "ProxyType" {value} """
+	os.system(cmd)
+
+if readConfig() == 0:
+	writeConfig(1)
+else:
+	writeConfig(0)

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Comment=切换系统代理
+Exec=nohup /usr/bin/switchProxy > /dev/null &
+GenericName=切换代理
+Name=ProxySwitcher
+Icon=electron-ssr
+NoDisplay=false
+Path[$e]=
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Categories=Utility;Development;
